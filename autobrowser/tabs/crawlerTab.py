@@ -101,15 +101,15 @@ class CrawlerTab(BaseTab):
         well as gathering the ones collected by the behavior
         """
         logged_method = "collect_outlinks"
-        if all_frames:
-            try:
-                await self.collect_outlinks_all_frames()
-            except Exception as e:
-                self.logger.exception(
-                    logged_method, "manual collection failed", exc_info=e
-                )
-            else:
-                self.logger.debug(logged_method, "manual out link collection succeeded")
+        # if all_frames:
+        #     try:
+        #         await self.collect_outlinks_all_frames()
+        #     except Exception as e:
+        #         self.logger.exception(
+        #             logged_method, "manual collection failed", exc_info=e
+        #         )
+        #     else:
+        #         self.logger.debug(logged_method, "manual out link collection succeeded")
 
         out_links = None
         try:
